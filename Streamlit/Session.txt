@@ -1,0 +1,163 @@
+Streamlit is a python Framework uswd to create simple web applications, especially for Machine Learning, Data Science etc.
+
+/*Advantages*/:
+Easy to deploy
+Safe
+Very Fast development
+Compatible with almost all python libraries.
+
+/*Setting up the environement and installation*/
+
+1. Install Visual Studio Code if not done previously
+2. Add python extension in VS code
+
+3. Create a Desktop Folder for Streamlit
+4. Open the Folder in VS Code
+5. run command: /*pip install streamlit*/ in VS code Terminal
+6. To run a streamlit program, run Command in VS Code Terminal: streamlit run "prgm name"
+
+/*Some Basic Elements*/
+
+#import streamlit as st
+
+1. Heading and Texts
+   st.title("Text")
+   st.header("Text")
+   st.subheader("Text")
+   st.text("Text") //Similar to paragraph in html
+   st.markdown() //to implement html text features
+    st.markdown(**Text**) //to create bold text
+    st.markdown(*Text*) //to create italic text
+
+   markdown guide: https://www.markdownguide.org/cheat-sheet/
+
+2. Display code Snippets
+
+   code = *** enter your code here ***
+   st.code(code,language='')
+
+3. write()
+   implement any text function or markdown function using write()
+
+   st.write()
+
+4. Embedding images,audio and videos
+
+   make sure the files to be embedded are in the same folder
+
+   st.image('image name',caption='',width=) //caption and width are optional
+
+   st.audio('audio name')
+
+   st.video('video name')
+
+5. Interactive Widgets
+
+   st.checkbox('Name',value='default value')
+
+   on_change property: when the state of the check box is changed it redirects to a callback function
+
+   widget key property: prints the state of the checkbox
+   print(st.session_state.keyname) in callback function.
+
+6. Radio Button
+   
+   radio_btn=st.radio('Label',option=(list of option))
+   on_change and key widgets applicable
+
+7. Button
+   btn=st.button('Label',on_click=callback ftn)
+
+8. Selectbox
+
+   select= selectbox('Label',options=(list of options))
+   //single selection
+   
+   multi_select= st.multiselect('Label',options=())
+
+9. File Upload
+
+   st.file_uploader('Label',type='')
+   to accept multiple files: st.file_uploader('Label',type='',accept_multiple_files=True)
+
+10. Text input
+
+    val=st.text_input('Label',max_chars=)
+    print(val)
+    
+    descriptive text input: val=st.text_area('Label',max_chars=)
+
+11. Date
+
+    val=st.date_input('Label')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Structure
+
+    User Defined data type using primitive data type is known as structures.
+    In other words it grps variable of different data types under a single name.
+    It can be used to store data with similar charachteristics
+
+    eg. Details of student Name, roll no,marks 
+
+    syntax
+    struct structure name
+    {
+      variable 1
+      variable 2
+      variable 3
+      .
+      .
+      .
+      variable n
+    };
+
+    Declaring a struct variable
+    struct structure name variable name;
+    eg. struct student s1;
+
+   struct student
+   {
+      int rollno;
+      char name[20];
+      float marks; 
+   }
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
